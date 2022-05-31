@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-i = 97
-while i < 123:
-    print(chr(i))
-    i += 1
+for c in range(ord('a'), ord('z') + 1):
+    print(""
+          "{:c}".format(c), end="")
