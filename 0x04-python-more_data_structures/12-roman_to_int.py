@@ -1,13 +1,13 @@
-
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    table = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
-
-    if not isinstance(roman_string, str) or roman_string is None:
+    if not roman_string or type(roman_string) != str:
         return 0
-    prev, sum = 0, 0
-
-    for c in roman_string:
-        sum += table[c] if table[c] <= prev else table[c] - prev * 2
-        prev = table[c]
-    return sum
+    roman_d = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    roman_n = 0
+    for j in range(len(roman_string)):
+        if j > 0 and roman_d[roman_string[j]] > roman_d[roman_string[j - 1]]:
+            roman_n += roman_d[roman_string[j]] - 2 * \
+                        roman_d[roman_string[j - 1]]
+        else:
+            roman_n += roman_d[roman_string[j]]
+    return roman_n
