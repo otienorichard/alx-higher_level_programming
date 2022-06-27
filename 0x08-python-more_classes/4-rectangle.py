@@ -30,7 +30,18 @@ class Rectangle:
 
     def __repr__(self):
         """Return a string representation of a Rectangle instance
-        thatnce
+        that is able to recreate a new instance by using eval()
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    @property
+    def width(self):
+        """Retrieves the width of a Rectangle instance."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Sets the width of a Rectangle instance
         Args:
             value: value of the width, must be a positive integer
         """
@@ -71,15 +82,4 @@ class Rectangle:
         """
         if self.__height == 0 or self.__width == 0:
             return 0
-        return 2 * (self.__width + self.__height) is able to recreate a new instance by using eval()
-        """
-        return "Rectangle({}, {})".format(self.__width, self.__height)
-
-    @property
-    def width(self):
-        """Retrieves the width of a Rectangle instance."""
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """Sets the width of a Rectangle insta
+        return 2 * (self.__width + self.__height)
