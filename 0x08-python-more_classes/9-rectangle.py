@@ -25,7 +25,7 @@ class Rectangle:
         self.height = height
         Rectangle.number_of_instances += 1
 
- def __str__(self):
+    def __str__(self):
         """Returns an informal and nicely printable string representation
         of a Rectangle instance, filled with the '#' character."""
         if self.__height == 0 or self.__width == 0:
@@ -85,6 +85,7 @@ class Rectangle:
 
     def area(self):
         """Calculates the area of a Rectangle instance
+
         Returns:
             Area of the the rectangle, given by height * width
         """
@@ -92,7 +93,6 @@ class Rectangle:
 
     def perimeter(self):
         """Calculates the perimeter of a Rectangle instance
-
         Returns:
             Perimeter of the rectangle, given by 2 * (height + width)
         """
