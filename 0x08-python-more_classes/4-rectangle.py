@@ -30,30 +30,7 @@ class Rectangle:
 
     def __repr__(self):
         """Return a string representation of a Rectangle instance
-        thatns:
-            Area of the the rectangle, given by height * width
-        """
-        return self.__width * self.__height
-
-    def perimeter(self):
-        """Calculates the perimeter of a Rectangle instance
-        Returns:
-            Perimeter of the rectangle, given by 2 * (height + width)
-        """
-        if self.__height == 0 or self.__width == 0:
-            return 0
-        return 2 * (self.__width + self.__height) is able to recreate a new instance by using eval()
-        """
-        return "Rectangle({}, {})".format(self.__width, self.__height)
-
-    @property
-    def width(self):
-        """Retrieves the width of a Rectangle instance."""
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """Sets the width of a Rectangle instance
+        thatnce
         Args:
             value: value of the width, must be a positive integer
         """
@@ -82,4 +59,27 @@ class Rectangle:
 
     def area(self):
         """Calculates the area of a Rectangle instance
-        Retur
+        Returns:
+            Area of the the rectangle, given by height * width
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """Calculates the perimeter of a Rectangle instance
+        Returns:
+            Perimeter of the rectangle, given by 2 * (height + width)
+        """
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        return 2 * (self.__width + self.__height) is able to recreate a new instance by using eval()
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    @property
+    def width(self):
+        """Retrieves the width of a Rectangle instance."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Sets the width of a Rectangle insta
