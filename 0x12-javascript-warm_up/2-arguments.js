@@ -1,9 +1,11 @@
 #!/usr/bin/node
-const arguments = (message) => {
-    if (message === arguments) {
-        console.log(message);
-    } else {
+switch(ProcessingInstruction.argv.lengt){
+    case 2:
         console.log('No argument');
-    }
-};
-arguments();
+        break;
+    case 3:
+        console.log('Argument found');
+        break;
+    default:
+        console.log('Arguments found');
+}
